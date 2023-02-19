@@ -1,0 +1,945 @@
+{
+  "name": "Железная эра",
+  "description": "Эра, в которой Вы овладеете навыками выплавки и работы с железом и его сплавами.",
+  "quests": [
+    {
+      "name": "Сыродутная печь",
+      "description": "Где Вы узнаете секрет выплавки железа.",
+      "x": 50,
+      "y": 14,
+      "bigicon": true,
+      "icon": {
+        "id": "terrafirmacraft:item.Raw Iron Bloom",
+        "damage": 400
+      },
+      "prerequisites": [
+        "{Эра литья}[Бронза]"
+      ],
+      "tasks": [
+        {
+          "type": "CRAFT",
+          "description": "Создаем печь",
+          "longDescription": "Чтобы изготовить кованое железо (wrought iron), Вам нужно сделать сыродутную печь (нет, в ней не надувают сыр :)). Сначала Вам нужно изготовить блок Сыродутного горна, который состоит из 8 двойных листов бронзы любого типа (Вы можете смешивать и сочетать различные виды бронзы). Сыродутная печь - это многоблочная конструкция. Чтобы построить ее, положите на землю любых скрафченых кирпичей (булыга не подойдет) 3x3. Затем, на втором ряду центральный и 1 боковой блоки оставляем пустые, а остальные стороны закладываем кирпичами (буквой \"П\"). Третий ряд - это крест с пустотой в центре (получается труба). Эту трубу можно увеличить еще на 2 яруса, тогда вместимость печи тоже увеличится. Поместите скрафченый Сыродутый горн спереди на себя на второй ряд печи. Он работает как дверца. Откройте его и заложите в центр печи 8 древесного угля.",
+          "items": [
+            {
+              "item": {
+                "id": "terrafirmacraft:EarlyBloomery"
+              }
+            }
+          ]
+        },
+        {
+          "type": "DETECT",
+          "description": "Разжигаем огонь",
+          "longDescription": "После размещения 8 древесных углей в печь бросьте в трубу сверху 8 кусков руды (независимо от качества) и 8 древесного угля. Вы можете добавить еще 8 кусков руды и угля на каждый дополнительный слой тубы, чтобы получить в общей сложности 24 куска. После этого закройте створку и зажгите печь с помощью огнива. Через несколько часов у Вас сплавится Крица (Raw iron bloom), которую надо собрать киркой.",
+          "items": [
+            {
+              "item": {
+                "id": "terrafirmacraft:item.Raw Iron Bloom",
+                "damage": 100
+              },
+              "precision": "FUZZY"
+            }
+          ]
+        },
+        {
+          "type": "DETECT",
+          "description": "Обрабатываем крицу",
+          "longDescription": "После того, как создалась Крица, первым шагом будет нагрев ее в кузнице, пока она не станет достаточно горячей для обработки на бронзовой наковальне. Там создаем из нее Кричное железо. Затем, на наковальне необходимо отделить шлак и разделить на куски. Далее, расплавить очищенное железо в тигеле. Не плавьте просто Кричное железо, т.к. вы получите только 100 единиц, а остальное пропадет.",
+          "items": [
+            {
+              "item": {
+                "id": "terrafirmacraft:item.Wrought Iron Ingot"
+              },
+              "precision": "NBT_FUZZY"
+            }
+          ]
+        }
+      ],
+      "reward": [
+        {
+          "id": "terrafirmacraft:item.Ore",
+          "damage": 10,
+          "amount": 8
+        },
+        {
+          "id": "minecraft:experience_bottle",
+          "amount": 8
+        }
+      ],
+      "rewardchoice": [
+        {
+          "id": "terrafirmacraft:item.coal",
+          "damage": 1,
+          "amount": 32
+        },
+        {
+          "id": "terrafirmacraft:item.Ore",
+          "damage": 10,
+          "amount": 8
+        },
+        {
+          "id": "HardcoreQuesting:hearts",
+          "damage": 1
+        }
+      ]
+    },
+    {
+      "name": "Меха",
+      "description": "Здесь Вы узнаете, как сделать кузницу более горячей.",
+      "x": 105,
+      "y": 48,
+      "icon": {
+        "id": "terrafirmacraft:Bellows"
+      },
+      "prerequisites": [
+        "{Эра литья}[Кузница]"
+      ],
+      "tasks": [
+        {
+          "type": "CRAFT",
+          "description": "Подаем много воздуха",
+          "longDescription": "Меха можно разместить рядом с костром, кузницей или доменной печью. Направьте их отверстием к перечисленным конструкциям. Их необходимо поставить на твердый блок. Щелчок правой кнопкой мыши временно увеличит жар за счет повышенного потребления топлива. Это не увеличивает скорость нагрева предметов в кузнице или процесса плавления в доменной печи. Но временно повысит предельную температуру кузницы.",
+          "items": [
+            {
+              "item": {
+                "id": "terrafirmacraft:Bellows"
+              }
+            }
+          ]
+        }
+      ],
+      "reward": [
+        {
+          "id": "terrafirmacraft:Bellows"
+        }
+      ]
+    },
+    {
+      "name": "Тигель",
+      "description": "Где Вы узнаете, что можно плавить металлы над кузницей.",
+      "x": 21,
+      "y": 170,
+      "icon": {
+        "id": "terrafirmacraft:Crucible"
+      },
+      "prerequisites": [
+        "{Эра литья}[Кузница]"
+      ],
+      "tasks": [
+        {
+          "type": "CRAFT",
+          "description": "Огнеупорная глина",
+          "longDescription": "Это полезный материал, так как из нее делают керамику, устойчивую к высоким температурам.",
+          "items": [
+            {
+              "item": {
+                "id": "terrafirmacraft:item.Clay",
+                "damage": 1
+              },
+              "required": 5
+            }
+          ]
+        },
+        {
+          "type": "DETECT",
+          "description": "Продвинутая плавка мет-ов",
+          "longDescription": "Тигель ставится над вашей кузницей (на угли). Когда он нагревается, Вы можете поместить в него большинство металлов, чтобы расплавить их. Он удобен при смешивании сплавов. Для некоторых металлов потребуются меха, чтобы температура тигля была достаточно высокой. В тигеле можно переплавить старую наковалню.",
+          "items": [
+            {
+              "item": {
+                "id": "terrafirmacraft:Crucible"
+              }
+            }
+          ]
+        }
+      ],
+      "reward": [
+        {
+          "id": "terrafirmacraft:item.Clay",
+          "damage": 1,
+          "amount": 5
+        }
+      ]
+    },
+    {
+      "name": "Черная сталь",
+      "description": "Где Вы научитесь делать сталь прочнее, а математика будет сложнее.",
+      "x": 231,
+      "y": 18,
+      "icon": {
+        "id": "terrafirmacraft:item.Black Steel Ingot"
+      },
+      "prerequisites": [
+        "Доменная печь"
+      ],
+      "tasks": [
+        {
+          "type": "DETECT",
+          "description": "Сырая сталь",
+          "longDescription": "Чтобы изготовить черную сталь, Вам нужно начать с изготовления сырой стали (weak steel) в тигле. Сырая сталь - это нерафинированный сплав стали, никеля и черной бронзы. Используйте NEI, чтобы узнать соотношение. Чтобы сделать один слиток черной стали, вам также понадобится слиток чугуна.",
+          "items": [
+            {
+              "item": {
+                "id": "terrafirmacraft:item.Weak Steel Ingot"
+              },
+              "precision": "NBT_FUZZY"
+            },
+            {
+              "item": {
+                "id": "terrafirmacraft:item.Pig Iron Ingot"
+              },
+              "precision": "NBT_FUZZY"
+            }
+          ]
+        },
+        {
+          "type": "DETECT",
+          "description": "1+1\u003d1? Очистка черной стали",
+          "longDescription": "Теперь Вам нужно сварить чугун и сырую сталь вместе. После этого их нужно обработать на наковальне, чтобы удалить примеси.",
+          "items": [
+            {
+              "item": {
+                "id": "terrafirmacraft:item.Black Steel Ingot"
+              },
+              "precision": "NBT_FUZZY"
+            }
+          ]
+        }
+      ],
+      "reward": [
+        {
+          "id": "terrafirmacraft:item.Ore",
+          "damage": 10,
+          "amount": 8
+        }
+      ],
+      "rewardchoice": [
+        {
+          "id": "terrafirmacraft:item.Ore",
+          "damage": 10,
+          "amount": 8
+        },
+        {
+          "id": "terrafirmacraft:item.coal",
+          "damage": 1,
+          "amount": 64
+        }
+      ]
+    },
+    {
+      "name": "Синяя сталь",
+      "description": "Где Вы научитесь делать жаропрочную сталь.",
+      "x": 266,
+      "y": 80,
+      "icon": {
+        "id": "terrafirmacraft:item.Blue Steel Ingot"
+      },
+      "prerequisites": [
+        "Черная сталь"
+      ],
+      "tasks": [
+        {
+          "type": "DETECT",
+          "description": "Сырая синяя сталь",
+          "longDescription": "Чтобы изготовить Синюю Сталь, Вам нужно начать с изготовления Сырой Синей стали в тигле. Это сплав черной стали, висмутовой бронзы, стерлингового серебра и обычной стали. Используйте NEI, чтобы увидеть соотношения. Чтобы сделать один слиток синей стали, Вам также понадобится слиток черной стали, чтобы сварить его со слитком сырой синей стали.",
+          "items": [
+            {
+              "item": {
+                "id": "terrafirmacraft:item.Weak Blue Steel Ingot"
+              },
+              "precision": "NBT_FUZZY"
+            },
+            {
+              "item": {
+                "id": "terrafirmacraft:item.Black Steel Ingot"
+              },
+              "precision": "NBT_FUZZY"
+            }
+          ]
+        },
+        {
+          "type": "DETECT",
+          "description": "Очистка синей стали",
+          "longDescription": "Теперь Вам нужно сварить вместе слитки Черной Стали и Сырой Синей Стали. После этого их нужно обработать на наковальне, чтобы удалить примеси.",
+          "items": [
+            {
+              "item": {
+                "id": "terrafirmacraft:item.Blue Steel Ingot"
+              },
+              "precision": "NBT_FUZZY"
+            }
+          ]
+        }
+      ],
+      "reward": [
+        {
+          "id": "terrafirmacraft:item.Ore",
+          "damage": 28,
+          "amount": 8
+        },
+        {
+          "id": "minecraft:experience_bottle",
+          "amount": 16
+        }
+      ],
+      "rewardchoice": [
+        {
+          "id": "terrafirmacraft:item.Sterling Silver Ingot",
+          "amount": 8
+        },
+        {
+          "id": "terrafirmacraft:item.Bismuth Bronze Ingot",
+          "amount": 8
+        },
+        {
+          "id": "terrafirmacraft:item.Ore",
+          "damage": 28,
+          "amount": 8
+        }
+      ]
+    },
+    {
+      "name": "Красная сталь",
+      "description": "Здесь Вы научитесь делать сталь, устойчивую к коррозии и давлению.",
+      "x": 200,
+      "y": 78,
+      "icon": {
+        "id": "terrafirmacraft:item.Red Steel Ingot"
+      },
+      "prerequisites": [
+        "Черная сталь"
+      ],
+      "tasks": [
+        {
+          "type": "DETECT",
+          "description": "Слиток сырой красной стали",
+          "longDescription": "Чтобы изготовить Красную Сталь, Вам нужно начать с изготовления Сырой Красной Стали в тигле. Это сплав черной стали, розового золота, латуни и стали. Используйте NEI, чтобы увидеть соотношения. Чтобы сделать один слиток Красной Стали, Вам также понадобится слиток Черной Стали, чтобы сварить его со слитком Сырой Красной Стали.",
+          "items": [
+            {
+              "item": {
+                "id": "terrafirmacraft:item.Weak Red Steel Ingot"
+              },
+              "precision": "NBT_FUZZY"
+            },
+            {
+              "item": {
+                "id": "terrafirmacraft:item.Black Steel Ingot"
+              },
+              "precision": "NBT_FUZZY"
+            }
+          ]
+        },
+        {
+          "type": "DETECT",
+          "description": "Очистка красной стали",
+          "longDescription": "Теперь Вам нужно сварить вместе слитки Черной и Сырой Красной Стали. Как и ранее, после этого их нужно обработать на наковальне, чтобы удалить примеси.",
+          "items": [
+            {
+              "item": {
+                "id": "terrafirmacraft:item.Red Steel Ingot"
+              },
+              "precision": "NBT_FUZZY"
+            }
+          ]
+        }
+      ],
+      "reward": [
+        {
+          "id": "terrafirmacraft:item.Ore",
+          "damage": 28,
+          "amount": 8
+        },
+        {
+          "id": "minecraft:experience_bottle",
+          "amount": 16
+        }
+      ],
+      "rewardchoice": [
+        {
+          "id": "terrafirmacraft:item.Brass Ingot",
+          "amount": 8
+        },
+        {
+          "id": "terrafirmacraft:item.Rose Gold Ingot",
+          "amount": 8
+        },
+        {
+          "id": "terrafirmacraft:item.Ore",
+          "damage": 28,
+          "amount": 8
+        }
+      ]
+    },
+    {
+      "name": "Доменная печь",
+      "description": "Где Вы научитесь плавить железо при более высоких температурах для получения чугуна (pig iron).",
+      "x": 134,
+      "y": 17,
+      "icon": {
+        "id": "terrafirmacraft:Bloomery"
+      },
+      "prerequisites": [
+        "Сыродутная печь",
+        "Меха"
+      ],
+      "tasks": [
+        {
+          "type": "CRAFT",
+          "description": "Подготовка к строит-ву",
+          "longDescription": "Доменная печь - это многоблочная структура, используемая для переплавки железной руды в чугун. Для ее строительства начните с Домны.",
+          "items": [
+            {
+              "item": {
+                "id": "terrafirmacraft:Bloomery"
+              }
+            }
+          ]
+        },
+        {
+          "type": "DETECT",
+          "description": "Строительство дымохода",
+          "longDescription": "Первая часть доменной печи, которую Вам нужно построить - это ее дымоход. Для начала поместите четыре блока из огнеупорного кирпича в форме креста с пустотой внутри на высоте 3-го блока от земли, т.к. ниже дымохода будет располагаться Домна и ещё ниже - Тигель. Затем приделайте листы кованого железа (12 шт., одинарных, не двойные) на каждую внешнюю сторону блоков трубы из огнеупорного кирпича. Просто кликните ПКМ по блокам держа листы в руках. Вы можете увеличить размер дымохода до 6 блоков в высоту.",
+          "items": [
+            {
+              "item": {
+                "id": "terrafirmacraft:FireBrick"
+              },
+              "required": 4
+            },
+            {
+              "item": {
+                "id": "terrafirmacraft:item.Wrought Iron Sheet"
+              },
+              "required": 12
+            }
+          ]
+        },
+        {
+          "type": "DETECT",
+          "description": "Разжигаем печь",
+          "longDescription": "Чтобы достроить доменную печь, поставьте Домну под трубу и ниже Тигель. Затем установите меха, направленные в сторону доменной печи (отверстие мехов должно смотреть на блок Домны). Меха не могут стоять на воздухе, подставьте твердый блок для них. Вам также понадобится Фурма (tuyere), которая размещается в интерфейсе доменной печи. Печь будет переплавлять железо в чугун, но без фурмы Вы не сможете выкачать чугун. Фурма создается на наковальне из двойного металлического листа. Подойдет любой металл. Теперь бросьте в дымоход 4 древесных угля, 4 железной руды и 4 порошка флюса на слой. Зажгите доменную печь. Следите за ней и добавляйте больше угля, если уровень температуры опустится ниже уровня плавления руды. Нет необходимости раздувать меха, пока не образуется чугун, Вам нужно выяснить, когда это произойдет. Как только чугун сформировался, Вы можете раздувать меха, чтобы чугун потек через фурму в тигель. Формочки для слитков должны уже лежать в тигеле заранее.",
+          "items": [
+            {
+              "item": {
+                "id": "terrafirmacraft:Crucible"
+              }
+            },
+            {
+              "item": {
+                "id": "terrafirmacraft:item.Wrought Iron Tuyere"
+              },
+              "precision": "ORE_DICTIONARY"
+            }
+          ]
+        },
+        {
+          "type": "DETECT",
+          "description": "Обработка чугуна",
+          "longDescription": "Теперь, когда Вы выплавили слитки чугуна в формочки из тигеля Вам нужно быстро, пока не остыл слиток, очистить их от шлака на наковальне...дважды.",
+          "items": [
+            {
+              "item": {
+                "id": "terrafirmacraft:item.Steel Ingot"
+              },
+              "precision": "NBT_FUZZY"
+            }
+          ]
+        }
+      ],
+      "reward": [
+        {
+          "id": "minecraft:experience_bottle",
+          "amount": 8
+        },
+        {
+          "id": "terrafirmacraft:item.coal",
+          "damage": 1,
+          "amount": 32
+        }
+      ],
+      "rewardchoice": [
+        {
+          "id": "terrafirmacraft:FireBrick",
+          "amount": 8
+        },
+        {
+          "id": "terrafirmacraft:item.Wrought Iron Sheet",
+          "amount": 6
+        }
+      ]
+    },
+    {
+      "name": "Синее ведро",
+      "description": "Где Вы научитесь перемещать лаву.",
+      "x": 266,
+      "y": 124,
+      "icon": {
+        "id": "terrafirmacraft:item.Blue Steel Bucket Empty"
+      },
+      "prerequisites": [
+        "Синяя сталь"
+      ],
+      "tasks": [
+        {
+          "type": "DETECT",
+          "description": "Синий - для горячих вещей",
+          "longDescription": "Синяя сталь, похоже, единственный сплав в Вашем мире, достаточно прочный, чтобы выдержать сильный жар при переносе лавы.",
+          "items": [
+            {
+              "item": {
+                "id": "terrafirmacraft:item.Blue Steel Bucket Empty"
+              }
+            }
+          ]
+        }
+      ],
+      "reward": [
+        {
+          "id": "minecraft:experience_bottle",
+          "amount": 16
+        },
+        {
+          "id": "terrafirmacraft:item.Ore",
+          "damage": 10,
+          "amount": 8
+        }
+      ],
+      "rewardchoice": [
+        {
+          "id": "terrafirmacraft:item.Ore",
+          "damage": 10,
+          "amount": 8
+        },
+        {
+          "id": "terrafirmacraft:item.coal",
+          "damage": 1,
+          "amount": 64
+        }
+      ]
+    },
+    {
+      "name": "Ножницы",
+      "description": "Больше, чем просто шерсть.",
+      "x": 24,
+      "y": 75,
+      "icon": {
+        "id": "terrafirmacraft:item.shears"
+      },
+      "prerequisites": [
+        "Сыродутная печь"
+      ],
+      "tasks": [
+        {
+          "type": "DETECT",
+          "description": "Две заготовки для ножей",
+          "longDescription": "Теперь, когда Вы знаете, как делать кованое железо, Вы можете сделать ножницы. Хотя овец можно стричь и ножом, ножницы дадут больше шерсти. Они также являются очень полезным инструментом для срезания листьев. Начните с изготовления двух кованых лезвий ножей.",
+          "items": [
+            {
+              "item": {
+                "id": "terrafirmacraft:item.Wrought Iron Knife Blade"
+              },
+              "required": 2,
+              "precision": "NBT_FUZZY"
+            }
+          ]
+        },
+        {
+          "type": "DETECT",
+          "description": "Объединяем лезвия ножей",
+          "longDescription": "Теперь, когда у Вас есть два лезвия ножа, поместите их оба в рабочую область наковальни (каждое лезвие в отдельный слот). Теперь Вы сможете выбрать чертеж ножниц.",
+          "items": [
+            {
+              "item": {
+                "id": "terrafirmacraft:item.shears"
+              }
+            }
+          ]
+        }
+      ],
+      "reward": [
+        {
+          "id": "terrafirmacraft:item.Ore",
+          "damage": 10,
+          "amount": 8
+        },
+        {
+          "id": "minecraft:experience_bottle",
+          "amount": 8
+        }
+      ],
+      "rewardchoice": [
+        {
+          "id": "terrafirmacraft:item.Ore",
+          "damage": 10,
+          "amount": 8
+        },
+        {
+          "id": "terrafirmacraft:item.coal",
+          "damage": 1,
+          "amount": 16
+        }
+      ]
+    },
+    {
+      "name": "Гриль",
+      "description": "Готовка еды выходит на новый уровень.",
+      "x": 53,
+      "y": 75,
+      "icon": {
+        "id": "terrafirmacraft:Grill"
+      },
+      "prerequisites": [
+        "Сыродутная печь"
+      ],
+      "tasks": [
+        {
+          "type": "DETECT",
+          "description": "Параллельная готовка еды",
+          "longDescription": "Гриль позволяет готовить несколько продуктов одновременно. Обычно каждый предмет не должен превышать 80 унций, но в TNFC Вы можете приготовить целых 160 унций (полный стак). Чтобы установить гриль, поставьте его прямо на кузницу. В качестве альтернативы установите столб высотой в 2 кирпича слева и справа от костра. Затем установите гриль прямо на костер.",
+          "items": [
+            {
+              "item": {
+                "id": "terrafirmacraft:Grill"
+              }
+            }
+          ]
+        }
+      ],
+      "reward": [
+        {
+          "id": "terrafirmacraft:item.flintAndSteel"
+        },
+        {
+          "id": "minecraft:experience_bottle",
+          "amount": 8
+        }
+      ],
+      "rewardchoice": [
+        {
+          "id": "terrafirmacraft:item.LooseRock",
+          "damage": 5,
+          "amount": 16
+        }
+      ]
+    },
+    {
+      "name": "Сплавы не для инструментов",
+      "description": "Где Вы узнаете о еще нескольких сплавах, которые могут Вам понадобиться в дальнейшем, но не могут быть использованы для изготовления инструментов.",
+      "x": 53,
+      "y": 170,
+      "icon": {
+        "id": "terrafirmacraft:item.Brass Ingot"
+      },
+      "prerequisites": [
+        "Тигель"
+      ],
+      "tasks": [
+        {
+          "type": "DETECT",
+          "description": "Латунь",
+          "longDescription": "Латунь - это сплав меди и сфалерита (цинка). Он может быть сделан в тигле или гончарной печи. Соотношение составляет от 88% до 92% меди и от 8% до 12% цинка. А вообще, NEI - Ваш лучший друг :)",
+          "items": [
+            {
+              "item": {
+                "id": "terrafirmacraft:item.Brass Ingot"
+              },
+              "precision": "NBT_FUZZY"
+            }
+          ]
+        },
+        {
+          "type": "DETECT",
+          "description": "Розовое золото",
+          "longDescription": "Розовое золото - это сплав золота и меди. Этот сплав также можно сделать в тигле или в гончарной печи. Соотношение составляет от 70% до 85% золота и от 15% до 30% меди. Из розового золота можно изготовить наковальню. Этот рецепт на случай, когда бронзы очень мало.",
+          "items": [
+            {
+              "item": {
+                "id": "terrafirmacraft:item.Rose Gold Ingot"
+              },
+              "precision": "NBT_FUZZY"
+            }
+          ]
+        },
+        {
+          "type": "DETECT",
+          "description": "Стерлинговое серебро",
+          "longDescription": "Стерлинговое серебро - это сплав меди и серебра. И он может быть сделан в тигле или в гончарной печи. Соотношение составляет от 60% до 80% серебра и от 20% до 40% меди.",
+          "items": [
+            {
+              "item": {
+                "id": "terrafirmacraft:item.Sterling Silver Ingot"
+              },
+              "precision": "NBT_FUZZY"
+            }
+          ]
+        }
+      ],
+      "reward": [
+        {
+          "id": "terrafirmacraft:item.Ore",
+          "amount": 8
+        }
+      ],
+      "rewardchoice": [
+        {
+          "id": "terrafirmacraft:item.Rose Gold Ingot",
+          "amount": 4
+        },
+        {
+          "id": "terrafirmacraft:item.Sterling Silver Ingot",
+          "amount": 4
+        },
+        {
+          "id": "terrafirmacraft:item.Brass Ingot",
+          "amount": 4
+        }
+      ]
+    },
+    {
+      "name": "Стальная печь",
+      "description": "Где Вы узнаете о передовых технологиях выплавки.",
+      "x": 135,
+      "y": 74,
+      "icon": {
+        "id": "minecraft:furnace"
+      },
+      "prerequisites": [
+        "Доменная печь"
+      ],
+      "tasks": [
+        {
+          "type": "CRAFT",
+          "description": "Создадим одну такую",
+          "longDescription": "Теперь, когда Вы знаете, как делать сталь, Вы можете сделать печь для решения таких задач, как изготовление стекла, древесного угля, обжиг глины и т.д.",
+          "items": [
+            {
+              "item": {
+                "id": "minecraft:furnace"
+              }
+            }
+          ]
+        }
+      ],
+      "reward": [
+        {
+          "id": "minecraft:experience_bottle",
+          "amount": 8
+        }
+      ],
+      "rewardchoice": [
+        {
+          "id": "terrafirmacraft:item.coal",
+          "damage": 1,
+          "amount": 64
+        },
+        {
+          "id": "terrafirmacraft:item.Ore",
+          "damage": 10,
+          "amount": 16
+        }
+      ]
+    },
+    {
+      "name": "Красное ведро",
+      "description": "Где Вы научитесь перемещать воду.",
+      "x": 199,
+      "y": 122,
+      "icon": {
+        "id": "terrafirmacraft:item.Red Steel Bucket Empty"
+      },
+      "prerequisites": [
+        "Красная сталь"
+      ],
+      "tasks": [
+        {
+          "type": "DETECT",
+          "description": "Красный - для холодн. вещей",
+          "longDescription": "Красная сталь - первый найденный металл в Вашем мире, который достаточно прочен, чтобы удержать целый блок источника воды.",
+          "items": [
+            {
+              "item": {
+                "id": "terrafirmacraft:item.Red Steel Bucket Empty"
+              }
+            }
+          ]
+        }
+      ],
+      "reward": [
+        {
+          "id": "minecraft:experience_bottle",
+          "amount": 16
+        },
+        {
+          "id": "terrafirmacraft:item.Ore",
+          "damage": 10,
+          "amount": 8
+        }
+      ],
+      "rewardchoice": [
+        {
+          "id": "terrafirmacraft:item.Ore",
+          "damage": 10,
+          "amount": 8
+        },
+        {
+          "id": "terrafirmacraft:item.coal",
+          "damage": 1,
+          "amount": 64
+        }
+      ]
+    },
+    {
+      "name": "Ультимативное ведро",
+      "description": "Почему не оба?                            (отсылка к мему \"Porque no los dos?\")",
+      "x": 233,
+      "y": 156,
+      "icon": {
+        "id": "minecraft:bucket"
+      },
+      "prerequisites": [
+        "Синее ведро",
+        "Красное ведро"
+      ],
+      "tasks": [
+        {
+          "type": "DETECT",
+          "description": "Красный и синий. 2 в 1",
+          "longDescription": "Ведро, которое может переносить лаву и воду (блоки-источники). Наконец-то!",
+          "items": [
+            {
+              "item": {
+                "id": "minecraft:bucket"
+              }
+            }
+          ]
+        }
+      ],
+      "reward": [
+        {
+          "id": "minecraft:experience_bottle",
+          "amount": 16
+        },
+        {
+          "id": "terrafirmacraft:item.Ore",
+          "damage": 28,
+          "amount": 8
+        }
+      ],
+      "rewardchoice": [
+        {
+          "id": "terrafirmacraft:item.Ore",
+          "damage": 28,
+          "amount": 8
+        },
+        {
+          "id": "terrafirmacraft:item.coal",
+          "damage": 1,
+          "amount": 64
+        }
+      ]
+    },
+    {
+      "name": "Автоматизация для людей",
+      "description": "Начало автоматизации.",
+      "x": 100,
+      "y": 116,
+      "icon": {
+        "id": "HopperDuctMod:hopperDuct"
+      },
+      "prerequisites": [
+        "Попрыгаем"
+      ],
+      "tasks": [
+        {
+          "type": "CRAFT",
+          "description": "101 способ применений",
+          "longDescription": "Засовывать вещи вручную? Я похож на прислужника? Дайте мне немного автоматизации!               Hopper Duct - это что-то вроде трубы для предметов. Подсоединяется к Grated Hopper.",
+          "items": [
+            {
+              "item": {
+                "id": "HopperDuctMod:hopperDuct"
+              }
+            }
+          ]
+        },
+        {
+          "type": "CRAFT",
+          "description": "Потыкай палкой",
+          "longDescription": "Лучше всего делать это заостренной палкой. Палка должна быть из ванили. Объедините палку из TFC с ножом в сетке крафта и получите ванильную. С помощью нее Вы сможете вращать Hopper Duct.",
+          "items": [
+            {
+              "item": {
+                "id": "minecraft:stick"
+              }
+            }
+          ]
+        },
+        {
+          "type": "CRAFT",
+          "description": "Воронка с фильтром",
+          "longDescription": "Это как воронка, но особая. Нижний ярус слотов в интерфейсе используется как белый фильтр.",
+          "items": [
+            {
+              "item": {
+                "id": "HopperDuctMod:gratedHopper"
+              }
+            }
+          ]
+        }
+      ],
+      "reward": [
+        {
+          "id": "HopperDuctMod:hopperDuct",
+          "amount": 8
+        }
+      ]
+    },
+    {
+      "name": "Попрыгаем",
+      "description": "Вы возненавидите делать их...                                                          Небольшая справка: Hopper или Воронка в рус. локализации. Hopper также можно перевести как \"попрыгун\" или реже \"зайчик\". Также, термин \"hop\" применяется в компьютерной среде, когда сетевые пакеты \"прыгают\" от одного IP адреса к другому). Поэтому в Minecraft технически предметы тоже \"прыгают\" при передачи из одного инвентаря в другой, когда используется любая автоматика (даже простейшая воронка). Отсюда и название hopper у нее.",
+      "x": 81,
+      "y": 74,
+      "icon": {
+        "id": "minecraft:hopper"
+      },
+      "prerequisites": [
+        "Сыродутная печь"
+      ],
+      "tasks": [
+        {
+          "type": "DETECT",
+          "description": "Пресс",
+          "longDescription": "Ее называют Загрузочной Воронкой (hopper), но в мире TFC это пресс. Поместите его над бочкой или большим керамическим сосудом. Заполните воронку оливками. Поставьте на нее сверху обтесанный камень (как ранее Вы делали его зубилом. См. соответствующий квест) и он слегка провалится в нее. Воронка нужна из TFC, а не ванильная. Интерфейс будет не доступен во время прессования. Убрать камень можно Shift+ПКМ. Прессование полной стопки оливок весом 160 унций займет 5 игровых часов, и будет произведено 250mb оливкового масла, чего ровно достаточно, чтобы полностью заполнить одну Масляную лампу.       Примечание:  В процессе прессования гниение оливок внутри воронки не останавливается (прессуйте в холодном месте), и за один раз прессуется только одна стопка оливок.",
+          "items": [
+            {
+              "item": {
+                "id": "terrafirmacraft:Hopper"
+              }
+            }
+          ]
+        },
+        {
+          "type": "CRAFT",
+          "description": "Воронка",
+          "longDescription": "Наконец-то нормальная настоящая ванильная воронка! Да начнется автоматизация!",
+          "items": [
+            {
+              "item": {
+                "id": "minecraft:hopper"
+              }
+            }
+          ]
+        }
+      ],
+      "reward": [
+        {
+          "id": "terrafirmacraft:item.Ore",
+          "damage": 10,
+          "amount": 4
+        }
+      ]
+    }
+  ],
+  "reputationBar": []
+}

@@ -1,0 +1,794 @@
+{
+  "name": "Forestry",
+  "description": "БЗЗЗЗЗЗ",
+  "quests": [
+    {
+      "name": "Начинаем мод Forestry",
+      "description": "Обзаведитесь пчелами.",
+      "x": 77,
+      "y": 11,
+      "icon": {
+        "id": "Forestry:scoop"
+      },
+      "prerequisites": [
+        "{Эра литья}[Прялка]"
+      ],
+      "tasks": [
+        {
+          "type": "CRAFT",
+          "description": "Сделайте сачок",
+          "longDescription": "Forestry - один из первых модов, которые Вы можете начать изучать после TFC. В первую очередь это мод о пчелах, чьи продукты полезны, также мод предлагает выводить разные виды деревьев (Вам может понадобится огнеупорная древесина), имеются всякие машины, двигатели и энергия. Чтобы начать, Вам нужно собрать несколько пчел. Поэтому Вам нужен сачок.",
+          "items": [
+            {
+              "item": {
+                "id": "Forestry:scoop"
+              }
+            }
+          ]
+        }
+      ],
+      "reward": [
+        {
+          "id": "Forestry:scoop"
+        }
+      ]
+    },
+    {
+      "name": "Собери их всех!",
+      "description": "Найдите ульи каждого типа.",
+      "x": 36,
+      "y": 40,
+      "icon": {
+        "id": "Forestry:beeQueenGE",
+        "nbt": "{MaxH:20,Mate:{Chromosomes:[0:{UID1:\"forestry.speciesMeadows\",UID0:\"forestry.speciesMeadows\",Slot:0b},1:{UID1:\"forestry.speedSlowest\",UID0:\"forestry.speedSlowest\",Slot:1b},2:{UID1:\"forestry.lifespanShorter\",UID0:\"forestry.lifespanShorter\",Slot:2b},3:{UID1:\"forestry.fertilityNormal\",UID0:\"forestry.fertilityNormal\",Slot:3b},4:{UID1:\"forestry.toleranceNone\",UID0:\"forestry.toleranceNone\",Slot:4b},5:{UID1:\"forestry.boolFalse\",UID0:\"forestry.boolFalse\",Slot:5b},6:{UID1:\"forestry.toleranceNone\",UID0:\"forestry.toleranceNone\",Slot:7b},7:{UID1:\"forestry.boolFalse\",UID0:\"forestry.boolFalse\",Slot:8b},8:{UID1:\"forestry.boolFalse\",UID0:\"forestry.boolFalse\",Slot:9b},9:{UID1:\"forestry.flowersVanilla\",UID0:\"forestry.flowersVanilla\",Slot:10b},10:{UID1:\"forestry.floweringSlower\",UID0:\"forestry.floweringSlower\",Slot:11b},11:{UID1:\"forestry.territoryAverage\",UID0:\"forestry.territoryAverage\",Slot:12b},12:{UID1:\"forestry.effectNone\",UID0:\"forestry.effectNone\",Slot:13b}]},Health:20,IsAnalyzed:0b,Genome:{Chromosomes:[0:{UID1:\"forestry.speciesMeadows\",UID0:\"forestry.speciesMeadows\",Slot:0b},1:{UID1:\"forestry.speedSlowest\",UID0:\"forestry.speedSlowest\",Slot:1b},2:{UID1:\"forestry.lifespanShorter\",UID0:\"forestry.lifespanShorter\",Slot:2b},3:{UID1:\"forestry.fertilityNormal\",UID0:\"forestry.fertilityNormal\",Slot:3b},4:{UID1:\"forestry.toleranceNone\",UID0:\"forestry.toleranceNone\",Slot:4b},5:{UID1:\"forestry.boolFalse\",UID0:\"forestry.boolFalse\",Slot:5b},6:{UID1:\"forestry.toleranceNone\",UID0:\"forestry.toleranceNone\",Slot:7b},7:{UID1:\"forestry.boolFalse\",UID0:\"forestry.boolFalse\",Slot:8b},8:{UID1:\"forestry.boolFalse\",UID0:\"forestry.boolFalse\",Slot:9b},9:{UID1:\"forestry.flowersVanilla\",UID0:\"forestry.flowersVanilla\",Slot:10b},10:{UID1:\"forestry.floweringSlower\",UID0:\"forestry.floweringSlower\",Slot:11b},11:{UID1:\"forestry.territoryAverage\",UID0:\"forestry.territoryAverage\",Slot:12b},12:{UID1:\"forestry.effectNone\",UID0:\"forestry.effectNone\",Slot:13b}]}}"
+      },
+      "prerequisites": [
+        "Начинаем мод Forestry"
+      ],
+      "tasks": [
+        {
+          "type": "DETECT",
+          "description": "6 видов трутней",
+          "longDescription": "К сожалению, нам пришлось отключить температуру и влажность для пчел. Поэтому ульи будут появляться случайно, а пчелы будут работать в любом биоме TFC.                              Примечание переводчика: каждая пчела имеет свои NBT данные и квестбук не может определить тип конкретной пчелы для задания. Для него это все одна пчела. Мне пришлось изменить условие для квеста, т.к. в оригинале были установлены пчелы с конкретными NBT данными, которые Вы никогда не найдете и этот квест не завершался. Сейчас Вам надо найти любого 1 трутня.",
+          "items": [
+            {
+              "item": {
+                "id": "Forestry:beeDroneGE",
+                "nbt": "{MaxH:20,Mate:{Chromosomes:[0:{UID1:\"forestry.speciesMeadows\",UID0:\"forestry.speciesMeadows\",Slot:0b},1:{UID1:\"forestry.speedSlowest\",UID0:\"forestry.speedSlowest\",Slot:1b},2:{UID1:\"forestry.lifespanShorter\",UID0:\"forestry.lifespanShorter\",Slot:2b},3:{UID1:\"forestry.fertilityNormal\",UID0:\"forestry.fertilityNormal\",Slot:3b},4:{UID1:\"forestry.toleranceNone\",UID0:\"forestry.toleranceNone\",Slot:4b},5:{UID1:\"forestry.boolFalse\",UID0:\"forestry.boolFalse\",Slot:5b},6:{UID1:\"forestry.toleranceNone\",UID0:\"forestry.toleranceNone\",Slot:7b},7:{UID1:\"forestry.boolFalse\",UID0:\"forestry.boolFalse\",Slot:8b},8:{UID1:\"forestry.boolFalse\",UID0:\"forestry.boolFalse\",Slot:9b},9:{UID1:\"forestry.flowersVanilla\",UID0:\"forestry.flowersVanilla\",Slot:10b},10:{UID1:\"forestry.floweringSlower\",UID0:\"forestry.floweringSlower\",Slot:11b},11:{UID1:\"forestry.territoryAverage\",UID0:\"forestry.territoryAverage\",Slot:12b},12:{UID1:\"forestry.effectNone\",UID0:\"forestry.effectNone\",Slot:13b}]},Health:20,IsAnalyzed:0b,Genome:{Chromosomes:[0:{UID1:\"forestry.speciesMeadows\",UID0:\"forestry.speciesMeadows\",Slot:0b},1:{UID1:\"forestry.speedSlowest\",UID0:\"forestry.speedSlowest\",Slot:1b},2:{UID1:\"forestry.lifespanShorter\",UID0:\"forestry.lifespanShorter\",Slot:2b},3:{UID1:\"forestry.fertilityNormal\",UID0:\"forestry.fertilityNormal\",Slot:3b},4:{UID1:\"forestry.toleranceNone\",UID0:\"forestry.toleranceNone\",Slot:4b},5:{UID1:\"forestry.boolFalse\",UID0:\"forestry.boolFalse\",Slot:5b},6:{UID1:\"forestry.toleranceNone\",UID0:\"forestry.toleranceNone\",Slot:7b},7:{UID1:\"forestry.boolFalse\",UID0:\"forestry.boolFalse\",Slot:8b},8:{UID1:\"forestry.boolFalse\",UID0:\"forestry.boolFalse\",Slot:9b},9:{UID1:\"forestry.flowersVanilla\",UID0:\"forestry.flowersVanilla\",Slot:10b},10:{UID1:\"forestry.floweringSlower\",UID0:\"forestry.floweringSlower\",Slot:11b},11:{UID1:\"forestry.territoryAverage\",UID0:\"forestry.territoryAverage\",Slot:12b},12:{UID1:\"forestry.effectNone\",UID0:\"forestry.effectNone\",Slot:13b}]}}"
+              },
+              "precision": "NBT_FUZZY"
+            },
+            {
+              "item": {
+                "id": "Forestry:beeDroneGE",
+                "nbt": "{MaxH:20,Mate:{Chromosomes:[0:{UID1:\"forestry.speciesForest\",UID0:\"forestry.speciesForest\",Slot:0b},1:{UID1:\"forestry.speedSlowest\",UID0:\"forestry.speedSlowest\",Slot:1b},2:{UID1:\"forestry.lifespanShorter\",UID0:\"forestry.lifespanShorter\",Slot:2b},3:{UID1:\"forestry.fertilityHigh\",UID0:\"forestry.fertilityHigh\",Slot:3b},4:{UID1:\"forestry.toleranceNone\",UID0:\"forestry.toleranceNone\",Slot:4b},5:{UID1:\"forestry.boolFalse\",UID0:\"forestry.boolFalse\",Slot:5b},6:{UID1:\"forestry.toleranceNone\",UID0:\"forestry.toleranceNone\",Slot:7b},7:{UID1:\"forestry.boolFalse\",UID0:\"forestry.boolFalse\",Slot:8b},8:{UID1:\"forestry.boolFalse\",UID0:\"forestry.boolFalse\",Slot:9b},9:{UID1:\"forestry.flowersVanilla\",UID0:\"forestry.flowersVanilla\",Slot:10b},10:{UID1:\"forestry.floweringSlower\",UID0:\"forestry.floweringSlower\",Slot:11b},11:{UID1:\"forestry.territoryAverage\",UID0:\"forestry.territoryAverage\",Slot:12b},12:{UID1:\"forestry.effectNone\",UID0:\"forestry.effectNone\",Slot:13b}]},Health:20,IsAnalyzed:0b,Genome:{Chromosomes:[0:{UID1:\"forestry.speciesForest\",UID0:\"forestry.speciesForest\",Slot:0b},1:{UID1:\"forestry.speedSlowest\",UID0:\"forestry.speedSlowest\",Slot:1b},2:{UID1:\"forestry.lifespanShorter\",UID0:\"forestry.lifespanShorter\",Slot:2b},3:{UID1:\"forestry.fertilityHigh\",UID0:\"forestry.fertilityHigh\",Slot:3b},4:{UID1:\"forestry.toleranceNone\",UID0:\"forestry.toleranceNone\",Slot:4b},5:{UID1:\"forestry.boolFalse\",UID0:\"forestry.boolFalse\",Slot:5b},6:{UID1:\"forestry.toleranceNone\",UID0:\"forestry.toleranceNone\",Slot:7b},7:{UID1:\"forestry.boolFalse\",UID0:\"forestry.boolFalse\",Slot:8b},8:{UID1:\"forestry.boolFalse\",UID0:\"forestry.boolFalse\",Slot:9b},9:{UID1:\"forestry.flowersVanilla\",UID0:\"forestry.flowersVanilla\",Slot:10b},10:{UID1:\"forestry.floweringSlower\",UID0:\"forestry.floweringSlower\",Slot:11b},11:{UID1:\"forestry.territoryAverage\",UID0:\"forestry.territoryAverage\",Slot:12b},12:{UID1:\"forestry.effectNone\",UID0:\"forestry.effectNone\",Slot:13b}]}}"
+              },
+              "precision": "NBT_FUZZY"
+            },
+            {
+              "item": {
+                "id": "Forestry:beeDroneGE",
+                "nbt": "{MaxH:30,Mate:{Chromosomes:[0:{UID1:\"forestry.speciesModest\",UID0:\"forestry.speciesModest\",Slot:0b},1:{UID1:\"forestry.speedSlower\",UID0:\"forestry.speedSlower\",Slot:1b},2:{UID1:\"forestry.lifespanShort\",UID0:\"forestry.lifespanShort\",Slot:2b},3:{UID1:\"forestry.fertilityNormal\",UID0:\"forestry.fertilityNormal\",Slot:3b},4:{UID1:\"forestry.toleranceBoth1\",UID0:\"forestry.toleranceBoth1\",Slot:4b},5:{UID1:\"forestry.boolTrue\",UID0:\"forestry.boolTrue\",Slot:5b},6:{UID1:\"forestry.toleranceDown1\",UID0:\"forestry.toleranceDown1\",Slot:7b},7:{UID1:\"forestry.boolFalse\",UID0:\"forestry.boolFalse\",Slot:8b},8:{UID1:\"forestry.boolFalse\",UID0:\"forestry.boolFalse\",Slot:9b},9:{UID1:\"forestry.flowersCacti\",UID0:\"forestry.flowersCacti\",Slot:10b},10:{UID1:\"forestry.floweringSlowest\",UID0:\"forestry.floweringSlowest\",Slot:11b},11:{UID1:\"forestry.territoryAverage\",UID0:\"forestry.territoryAverage\",Slot:12b},12:{UID1:\"forestry.effectNone\",UID0:\"forestry.effectNone\",Slot:13b}]},Health:30,IsAnalyzed:0b,Genome:{Chromosomes:[0:{UID1:\"forestry.speciesModest\",UID0:\"forestry.speciesModest\",Slot:0b},1:{UID1:\"forestry.speedSlower\",UID0:\"forestry.speedSlower\",Slot:1b},2:{UID1:\"forestry.lifespanShort\",UID0:\"forestry.lifespanShort\",Slot:2b},3:{UID1:\"forestry.fertilityNormal\",UID0:\"forestry.fertilityNormal\",Slot:3b},4:{UID1:\"forestry.toleranceBoth1\",UID0:\"forestry.toleranceBoth1\",Slot:4b},5:{UID1:\"forestry.boolTrue\",UID0:\"forestry.boolTrue\",Slot:5b},6:{UID1:\"forestry.toleranceDown1\",UID0:\"forestry.toleranceDown1\",Slot:7b},7:{UID1:\"forestry.boolFalse\",UID0:\"forestry.boolFalse\",Slot:8b},8:{UID1:\"forestry.boolFalse\",UID0:\"forestry.boolFalse\",Slot:9b},9:{UID1:\"forestry.flowersCacti\",UID0:\"forestry.flowersCacti\",Slot:10b},10:{UID1:\"forestry.floweringSlowest\",UID0:\"forestry.floweringSlowest\",Slot:11b},11:{UID1:\"forestry.territoryAverage\",UID0:\"forestry.territoryAverage\",Slot:12b},12:{UID1:\"forestry.effectNone\",UID0:\"forestry.effectNone\",Slot:13b}]}}"
+              },
+              "precision": "NBT_FUZZY"
+            },
+            {
+              "item": {
+                "id": "Forestry:beeDroneGE",
+                "nbt": "{MaxH:30,Mate:{Chromosomes:[0:{UID1:\"forestry.speciesTropical\",UID0:\"forestry.speciesTropical\",Slot:0b},1:{UID1:\"forestry.speedSlower\",UID0:\"forestry.speedSlower\",Slot:1b},2:{UID1:\"forestry.lifespanShort\",UID0:\"forestry.lifespanShort\",Slot:2b},3:{UID1:\"forestry.fertilityNormal\",UID0:\"forestry.fertilityNormal\",Slot:3b},4:{UID1:\"forestry.toleranceUp1\",UID0:\"forestry.toleranceUp1\",Slot:4b},5:{UID1:\"forestry.boolFalse\",UID0:\"forestry.boolFalse\",Slot:5b},6:{UID1:\"forestry.toleranceUp1\",UID0:\"forestry.toleranceUp1\",Slot:7b},7:{UID1:\"forestry.boolFalse\",UID0:\"forestry.boolFalse\",Slot:8b},8:{UID1:\"forestry.boolFalse\",UID0:\"forestry.boolFalse\",Slot:9b},9:{UID1:\"forestry.flowersJungle\",UID0:\"forestry.flowersJungle\",Slot:10b},10:{UID1:\"forestry.floweringSlowest\",UID0:\"forestry.floweringSlowest\",Slot:11b},11:{UID1:\"forestry.territoryAverage\",UID0:\"forestry.territoryAverage\",Slot:12b},12:{UID1:\"forestry.effectMiasmic\",UID0:\"forestry.effectMiasmic\",Slot:13b}]},Health:30,IsAnalyzed:0b,Genome:{Chromosomes:[0:{UID1:\"forestry.speciesTropical\",UID0:\"forestry.speciesTropical\",Slot:0b},1:{UID1:\"forestry.speedSlower\",UID0:\"forestry.speedSlower\",Slot:1b},2:{UID1:\"forestry.lifespanShort\",UID0:\"forestry.lifespanShort\",Slot:2b},3:{UID1:\"forestry.fertilityNormal\",UID0:\"forestry.fertilityNormal\",Slot:3b},4:{UID1:\"forestry.toleranceUp1\",UID0:\"forestry.toleranceUp1\",Slot:4b},5:{UID1:\"forestry.boolFalse\",UID0:\"forestry.boolFalse\",Slot:5b},6:{UID1:\"forestry.toleranceUp1\",UID0:\"forestry.toleranceUp1\",Slot:7b},7:{UID1:\"forestry.boolFalse\",UID0:\"forestry.boolFalse\",Slot:8b},8:{UID1:\"forestry.boolFalse\",UID0:\"forestry.boolFalse\",Slot:9b},9:{UID1:\"forestry.flowersJungle\",UID0:\"forestry.flowersJungle\",Slot:10b},10:{UID1:\"forestry.floweringSlowest\",UID0:\"forestry.floweringSlowest\",Slot:11b},11:{UID1:\"forestry.territoryAverage\",UID0:\"forestry.territoryAverage\",Slot:12b},12:{UID1:\"forestry.effectMiasmic\",UID0:\"forestry.effectMiasmic\",Slot:13b}]}}"
+              },
+              "precision": "NBT_FUZZY"
+            },
+            {
+              "item": {
+                "id": "Forestry:beeDroneGE",
+                "nbt": "{MaxH:30,Mate:{Chromosomes:[0:{UID1:\"forestry.speciesWintry\",UID0:\"forestry.speciesWintry\",Slot:0b},1:{UID1:\"forestry.speedSlower\",UID0:\"forestry.speedSlower\",Slot:1b},2:{UID1:\"forestry.lifespanShort\",UID0:\"forestry.lifespanShort\",Slot:2b},3:{UID1:\"forestry.fertilityMaximum\",UID0:\"forestry.fertilityMaximum\",Slot:3b},4:{UID1:\"forestry.toleranceUp1\",UID0:\"forestry.toleranceUp1\",Slot:4b},5:{UID1:\"forestry.boolFalse\",UID0:\"forestry.boolFalse\",Slot:5b},6:{UID1:\"forestry.toleranceBoth1\",UID0:\"forestry.toleranceBoth1\",Slot:7b},7:{UID1:\"forestry.boolFalse\",UID0:\"forestry.boolFalse\",Slot:8b},8:{UID1:\"forestry.boolFalse\",UID0:\"forestry.boolFalse\",Slot:9b},9:{UID1:\"forestry.flowersSnow\",UID0:\"forestry.flowersSnow\",Slot:10b},10:{UID1:\"forestry.floweringSlowest\",UID0:\"forestry.floweringSlowest\",Slot:11b},11:{UID1:\"forestry.territoryAverage\",UID0:\"forestry.territoryAverage\",Slot:12b},12:{UID1:\"forestry.effectGlacial\",UID0:\"forestry.effectGlacial\",Slot:13b}]},Health:30,IsAnalyzed:0b,Genome:{Chromosomes:[0:{UID1:\"forestry.speciesWintry\",UID0:\"forestry.speciesWintry\",Slot:0b},1:{UID1:\"forestry.speedSlower\",UID0:\"forestry.speedSlower\",Slot:1b},2:{UID1:\"forestry.lifespanShort\",UID0:\"forestry.lifespanShort\",Slot:2b},3:{UID1:\"forestry.fertilityMaximum\",UID0:\"forestry.fertilityMaximum\",Slot:3b},4:{UID1:\"forestry.toleranceUp1\",UID0:\"forestry.toleranceUp1\",Slot:4b},5:{UID1:\"forestry.boolFalse\",UID0:\"forestry.boolFalse\",Slot:5b},6:{UID1:\"forestry.toleranceBoth1\",UID0:\"forestry.toleranceBoth1\",Slot:7b},7:{UID1:\"forestry.boolFalse\",UID0:\"forestry.boolFalse\",Slot:8b},8:{UID1:\"forestry.boolFalse\",UID0:\"forestry.boolFalse\",Slot:9b},9:{UID1:\"forestry.flowersSnow\",UID0:\"forestry.flowersSnow\",Slot:10b},10:{UID1:\"forestry.floweringSlowest\",UID0:\"forestry.floweringSlowest\",Slot:11b},11:{UID1:\"forestry.territoryAverage\",UID0:\"forestry.territoryAverage\",Slot:12b},12:{UID1:\"forestry.effectGlacial\",UID0:\"forestry.effectGlacial\",Slot:13b}]}}"
+              },
+              "precision": "NBT_FUZZY"
+            },
+            {
+              "item": {
+                "id": "Forestry:beeDroneGE",
+                "nbt": "{MaxH:20,Mate:{Chromosomes:[0:{UID1:\"forestry.speciesMarshy\",UID0:\"forestry.speciesMarshy\",Slot:0b},1:{UID1:\"forestry.speedSlowest\",UID0:\"forestry.speedSlowest\",Slot:1b},2:{UID1:\"forestry.lifespanShorter\",UID0:\"forestry.lifespanShorter\",Slot:2b},3:{UID1:\"forestry.fertilityNormal\",UID0:\"forestry.fertilityNormal\",Slot:3b},4:{UID1:\"forestry.toleranceBoth1\",UID0:\"forestry.toleranceBoth1\",Slot:4b},5:{UID1:\"forestry.boolFalse\",UID0:\"forestry.boolFalse\",Slot:5b},6:{UID1:\"forestry.toleranceNone\",UID0:\"forestry.toleranceNone\",Slot:7b},7:{UID1:\"forestry.boolFalse\",UID0:\"forestry.boolFalse\",Slot:8b},8:{UID1:\"forestry.boolFalse\",UID0:\"forestry.boolFalse\",Slot:9b},9:{UID1:\"forestry.flowersMushrooms\",UID0:\"forestry.flowersMushrooms\",Slot:10b},10:{UID1:\"forestry.floweringSlower\",UID0:\"forestry.floweringSlower\",Slot:11b},11:{UID1:\"forestry.territoryAverage\",UID0:\"forestry.territoryAverage\",Slot:12b},12:{UID1:\"forestry.effectNone\",UID0:\"forestry.effectNone\",Slot:13b}]},Health:20,IsAnalyzed:0b,Genome:{Chromosomes:[0:{UID1:\"forestry.speciesMarshy\",UID0:\"forestry.speciesMarshy\",Slot:0b},1:{UID1:\"forestry.speedSlowest\",UID0:\"forestry.speedSlowest\",Slot:1b},2:{UID1:\"forestry.lifespanShorter\",UID0:\"forestry.lifespanShorter\",Slot:2b},3:{UID1:\"forestry.fertilityNormal\",UID0:\"forestry.fertilityNormal\",Slot:3b},4:{UID1:\"forestry.toleranceBoth1\",UID0:\"forestry.toleranceBoth1\",Slot:4b},5:{UID1:\"forestry.boolFalse\",UID0:\"forestry.boolFalse\",Slot:5b},6:{UID1:\"forestry.toleranceNone\",UID0:\"forestry.toleranceNone\",Slot:7b},7:{UID1:\"forestry.boolFalse\",UID0:\"forestry.boolFalse\",Slot:8b},8:{UID1:\"forestry.boolFalse\",UID0:\"forestry.boolFalse\",Slot:9b},9:{UID1:\"forestry.flowersMushrooms\",UID0:\"forestry.flowersMushrooms\",Slot:10b},10:{UID1:\"forestry.floweringSlower\",UID0:\"forestry.floweringSlower\",Slot:11b},11:{UID1:\"forestry.territoryAverage\",UID0:\"forestry.territoryAverage\",Slot:12b},12:{UID1:\"forestry.effectNone\",UID0:\"forestry.effectNone\",Slot:13b}]}}"
+              },
+              "precision": "NBT_FUZZY"
+            }
+          ]
+        }
+      ],
+      "reward": [
+        {
+          "id": "Forestry:scoop"
+        }
+      ]
+    },
+    {
+      "name": "В TFC есть пустыни?",
+      "description": "А кактусы?",
+      "x": 22,
+      "y": 75,
+      "icon": {
+        "id": "minecraft:cactus"
+      },
+      "prerequisites": [
+        "Собери их всех!"
+      ],
+      "tasks": [
+        {
+          "type": "DETECT",
+          "description": "Получение кактуса",
+          "longDescription": "Пустыни существуют в TFC, однако они очень редки. Поэтому найти кактус для ваших скромных (modest) пчел - проблема. Чтобы компенсировать это, мы создали рецепт ванильного кактуса.",
+          "items": [
+            {
+              "item": {
+                "id": "minecraft:cactus"
+              }
+            }
+          ]
+        },
+        {
+          "type": "DETECT",
+          "description": "Вам нужен цветочный горшок",
+          "longDescription": "Ванильный кактус нельзя посадить на песке TFC, но его можно посадить в цветочный горшок.",
+          "items": [
+            {
+              "item": {
+                "id": "terrafirmacraft:FlowerPot"
+              }
+            }
+          ]
+        }
+      ],
+      "reward": [
+        {
+          "id": "terrafirmacraft:item.Ore",
+          "damage": 9
+        },
+        {
+          "id": "minecraft:cactus"
+        }
+      ]
+    },
+    {
+      "name": "Пипирки",
+      "description": "Или он же \"Адский нарост\" (nether wart). Просто потому что.",
+      "x": 114,
+      "y": 110,
+      "icon": {
+        "id": "minecraft:nether_wart"
+      },
+      "prerequisites": [
+        "Неестественная генетика пчел"
+      ],
+      "tasks": [
+        {
+          "type": "CRAFT",
+          "description": "Делаем замену",
+          "longDescription": "Получение пипирок особо не требуется, так как Незерские пчелы воспринимают лаву и серу как цветы. Но на всякий случай мы сделали свои рецепты их и песка душ, так как лава может быть проблемой и для ее перемещения требуется ведро из Синей Стали.",
+          "items": [
+            {
+              "item": {
+                "id": "minecraft:nether_wart"
+              }
+            }
+          ]
+        },
+        {
+          "type": "CRAFT",
+          "description": "Вложи в это свою душу",
+          "longDescription": "Эта земля такая стремная...",
+          "items": [
+            {
+              "item": {
+                "id": "minecraft:soul_sand"
+              }
+            }
+          ]
+        }
+      ],
+      "reward": [
+        {
+          "id": "minecraft:soul_sand",
+          "amount": 8
+        }
+      ]
+    },
+    {
+      "name": "Что с драконом?",
+      "description": "Все еще летать на нем нельзя.",
+      "x": 76,
+      "y": 132,
+      "icon": {
+        "id": "minecraft:dragon_egg"
+      },
+      "prerequisites": [
+        "Неестественная генетика пчел"
+      ],
+      "tasks": [
+        {
+          "type": "CRAFT",
+          "description": "Яйцо или курица?",
+          "longDescription": "Просто нет способа реализовать измерение \"Край\" (End) и Дракона в условиях TFC, поэтому мы сделали рецепт яйца. Лучше похоохотьтесь на эндерменов.",
+          "items": [
+            {
+              "item": {
+                "id": "minecraft:dragon_egg"
+              }
+            }
+          ]
+        }
+      ],
+      "reward": [
+        {
+          "id": "minecraft:ender_pearl",
+          "amount": 4
+        }
+      ]
+    },
+    {
+      "name": "Неестественная генетика пчел",
+      "description": "Не забудьте прихватить поводок...",
+      "x": 76,
+      "y": 91,
+      "icon": {
+        "id": "terrafirmacraft:item.MineralOre",
+        "damage": 10
+      },
+      "prerequisites": [
+        "Собери их всех!",
+        "Им нужен новый дом"
+      ],
+      "tasks": [
+        {
+          "type": "DETECT",
+          "description": "Кое-что необычное",
+          "longDescription": "Настуран (уранинит). В общем, просто Уран. Не спрашивайте... просто добудьте его.",
+          "items": [
+            {
+              "item": {
+                "id": "terrafirmacraft:item.MineralOre",
+                "damage": 10
+              }
+            }
+          ]
+        },
+        {
+          "type": "CRAFT",
+          "description": "Жемчужина к жемчужине",
+          "longDescription": "Как получить этих нужных надоедливых пчел, которые просто не хотят появляться, размножаясь? Похоже, что если окружить королеву предметами из определенной среды и облучить ее гамма-частицами мощной энергии, происходят интересные вещи... Нужно получить специфическую королеву. Мы записали наши исследования во внутриигровую Wiki для Вас. Просто нажмите \"I\" во время игры, чтобы открыть специальный журнал, где есть раздел про пчел. Или используйте NEI.",
+          "items": [
+            {
+              "item": {
+                "id": "Forestry:beeQueenGE",
+                "nbt": "{MaxH:60,Mate:{Chromosomes:[0:{UID1:\"forestry.speciesEnded\",UID0:\"forestry.speciesEnded\",Slot:0b},1:{UID1:\"forestry.speedSlower\",UID0:\"forestry.speedSlower\",Slot:1b},2:{UID1:\"forestry.lifespanLonger\",UID0:\"forestry.lifespanLonger\",Slot:2b},3:{UID1:\"forestry.fertilityLow\",UID0:\"forestry.fertilityLow\",Slot:3b},4:{UID1:\"forestry.toleranceUp1\",UID0:\"forestry.toleranceUp1\",Slot:4b},5:{UID1:\"forestry.boolTrue\",UID0:\"forestry.boolTrue\",Slot:5b},6:{UID1:\"forestry.toleranceNone\",UID0:\"forestry.toleranceNone\",Slot:7b},7:{UID1:\"forestry.boolFalse\",UID0:\"forestry.boolFalse\",Slot:8b},8:{UID1:\"forestry.boolFalse\",UID0:\"forestry.boolFalse\",Slot:9b},9:{UID1:\"forestry.flowersEnd\",UID0:\"forestry.flowersEnd\",Slot:10b},10:{UID1:\"forestry.floweringSlowest\",UID0:\"forestry.floweringSlowest\",Slot:11b},11:{UID1:\"forestry.territoryLarge\",UID0:\"forestry.territoryLarge\",Slot:12b},12:{UID1:\"forestry.effectMisanthrope\",UID0:\"forestry.effectMisanthrope\",Slot:13b}]},Health:60,IsAnalyzed:0b,Genome:{Chromosomes:[0:{UID1:\"forestry.speciesEnded\",UID0:\"forestry.speciesEnded\",Slot:0b},1:{UID1:\"forestry.speedSlower\",UID0:\"forestry.speedSlower\",Slot:1b},2:{UID1:\"forestry.lifespanLonger\",UID0:\"forestry.lifespanLonger\",Slot:2b},3:{UID1:\"forestry.fertilityLow\",UID0:\"forestry.fertilityLow\",Slot:3b},4:{UID1:\"forestry.toleranceUp1\",UID0:\"forestry.toleranceUp1\",Slot:4b},5:{UID1:\"forestry.boolTrue\",UID0:\"forestry.boolTrue\",Slot:5b},6:{UID1:\"forestry.toleranceNone\",UID0:\"forestry.toleranceNone\",Slot:7b},7:{UID1:\"forestry.boolFalse\",UID0:\"forestry.boolFalse\",Slot:8b},8:{UID1:\"forestry.boolFalse\",UID0:\"forestry.boolFalse\",Slot:9b},9:{UID1:\"forestry.flowersEnd\",UID0:\"forestry.flowersEnd\",Slot:10b},10:{UID1:\"forestry.floweringSlowest\",UID0:\"forestry.floweringSlowest\",Slot:11b},11:{UID1:\"forestry.territoryLarge\",UID0:\"forestry.territoryLarge\",Slot:12b},12:{UID1:\"forestry.effectMisanthrope\",UID0:\"forestry.effectMisanthrope\",Slot:13b}]}}"
+              }
+            }
+          ]
+        }
+      ],
+      "reward": [
+        {
+          "id": "terrafirmacraft:item.MineralOre",
+          "damage": 10,
+          "amount": 8
+        }
+      ]
+    },
+    {
+      "name": "Энергия из торфа",
+      "description": "Пора идти на болота.",
+      "x": 275,
+      "y": 12,
+      "icon": {
+        "id": "Forestry:engine",
+        "damage": 1
+      },
+      "tasks": [
+        {
+          "type": "DETECT",
+          "description": "Сначала надо найти торф",
+          "longDescription": "Торф образуется в мире при очень специфических условиях. К счастью, в TNFC мы сделали так, что он появляется там, где Вы ожидаете его в реальном мире.",
+          "items": [
+            {
+              "item": {
+                "id": "terrafirmacraft:Peat"
+              }
+            }
+          ]
+        },
+        {
+          "type": "DETECT",
+          "description": "Затем надо разделить его",
+          "longDescription": "Хотя, Вы можете сжечь большой кусок торфа в костре, зачем это делать? Он воняет и делает вашу еду отвратительной. Лучше просто разделить его ножом на части, чтобы сжечь для получения энергии.",
+          "items": [
+            {
+              "item": {
+                "id": "Forestry:peat"
+              },
+              "required": 4
+            }
+          ]
+        },
+        {
+          "type": "CRAFT",
+          "description": "Сжигаем торф с пользой",
+          "longDescription": "Теперь, когда у Вас есть несколько пригодных для использования кусков торфа, вы можете поместить его торфяной двигатель и начать производство энергии.",
+          "items": [
+            {
+              "item": {
+                "id": "Forestry:engine",
+                "damage": 1
+              }
+            }
+          ]
+        }
+      ],
+      "reward": [
+        {
+          "id": "terrafirmacraft:Peat",
+          "amount": 8
+        }
+      ]
+    },
+    {
+      "name": "Что не может сделать плотник?",
+      "description": "Компания Ronco с гордостью представляет...",
+      "x": 237,
+      "y": 43,
+      "icon": {
+        "id": "Forestry:factory",
+        "damage": 1
+      },
+      "prerequisites": [
+        "Который час?",
+        "Энергия из торфа",
+        "Лучшие дома и сады"
+      ],
+      "parentrequirement": 1,
+      "tasks": [
+        {
+          "type": "CRAFT",
+          "description": "С чего начать?",
+          "longDescription": "Требуется ручная сборка. Убедитесь, что у Вас есть инструкция и необходимые инструменты. Это штука сама не соберется. Для начала Вам нужен Прочный корпус. Прихватите свой молот и несколько листов бронзы.",
+          "items": [
+            {
+              "item": {
+                "id": "Forestry:sturdyMachine"
+              }
+            }
+          ]
+        },
+        {
+          "type": "CRAFT",
+          "description": "И смастерите себе один",
+          "longDescription": "Детали у Вас есть. Теперь соберите все вместе.",
+          "items": [
+            {
+              "item": {
+                "id": "Forestry:factory",
+                "damage": 1
+              }
+            }
+          ]
+        },
+        {
+          "type": "CRAFT",
+          "description": "Почему бы не полный набор?",
+          "longDescription": "Почему бы не собрать полный комплект? Вы знаете, что хотите этого.",
+          "items": [
+            {
+              "item": {
+                "id": "Forestry:factory",
+                "damage": 2
+              }
+            },
+            {
+              "item": {
+                "id": "Forestry:factory",
+                "damage": 5
+              }
+            }
+          ]
+        }
+      ],
+      "reward": [
+        {
+          "id": "Forestry:beeCombs",
+          "amount": 4
+        }
+      ],
+      "rewardchoice": [
+        {
+          "id": "Forestry:beeCombs",
+          "damage": 4,
+          "amount": 4
+        },
+        {
+          "id": "Forestry:beeCombs",
+          "damage": 6,
+          "amount": 4
+        },
+        {
+          "id": "Forestry:beeCombs",
+          "damage": 7,
+          "amount": 4
+        },
+        {
+          "id": "Forestry:beeCombs",
+          "damage": 15,
+          "amount": 4
+        }
+      ]
+    },
+    {
+      "name": "Им нужен новый дом",
+      "description": "Где Вы замените их старый дом новым.",
+      "x": 111,
+      "y": 39,
+      "icon": {
+        "id": "Forestry:apiculture",
+        "damage": 2
+      },
+      "prerequisites": [
+        "Начинаем мод Forestry"
+      ],
+      "tasks": [
+        {
+          "type": "CRAFT",
+          "description": "Липкая коробка с пчелами",
+          "longDescription": "В сетке крафта обложите любые соты блоками досок в форме U, а верхний ряд досками из TFT. NEI в рецепте показывает деревянную плиту. Не путайтесь.",
+          "items": [
+            {
+              "item": {
+                "id": "Forestry:apiculture",
+                "damage": 2
+              }
+            }
+          ]
+        }
+      ],
+      "reward": [
+        {
+          "id": "Forestry:apiculture",
+          "damage": 2
+        }
+      ]
+    },
+    {
+      "name": "Лучшие дома и сады",
+      "description": "Расширяемся.",
+      "x": 200,
+      "y": 70,
+      "icon": {
+        "id": "Forestry:apiculture"
+      },
+      "prerequisites": [
+        "Им нужен новый дом"
+      ],
+      "tasks": [
+        {
+          "type": "DETECT",
+          "description": "Немного конопли",
+          "longDescription": "Скорее всего, Вы уже успели выбить из зомби семена конопли и засеяли поля на будущее.",
+          "items": [
+            {
+              "item": {
+                "id": "ImmersiveEngineering:seed"
+              }
+            }
+          ]
+        },
+        {
+          "type": "DETECT",
+          "description": "Выжимаем масло",
+          "longDescription": "Соковыжималка поможет выжать из них масло.",
+          "items": [
+            {
+              "item": {
+                "id": "Forestry:waxCapsuleSeedOil"
+              }
+            }
+          ]
+        },
+        {
+          "type": "CRAFT",
+          "description": "Сделайте пасеку",
+          "longDescription": "В пасеку можно поместить 3 Необработанных или Пропитанных рамки для дополнительной продукции. В моде Forestry существует еще Пчелиный улей (Alveary). Пчелиный улей - это мультиблочная структура. Для нее требуется 27 блоков улья (Alveary), помещенных в куб 3x3x3 и сверху ряд любых плит. С плитами могут быть проблема, т.к. их можно скрафтить только из деревьев Forestry или ванилы, а для этого, похоже, придется их выводить. Также, для улья есть специальные блоки-апгрейды типа Роевня, Вентилятор, Обогреватель, Кондиционер, Стабилизатор, Сито. Лучше всего по ульям посмотреть Wiki или какой-нибудь гайд. Например, канал GravityCraft (его ник Sprenger). Канал русский.",
+          "items": [
+            {
+              "item": {
+                "id": "Forestry:apiculture"
+              }
+            }
+          ]
+        }
+      ],
+      "reward": [
+        {
+          "id": "ImmersiveEngineering:seed",
+          "amount": 16
+        }
+      ]
+    },
+    {
+      "name": "Который час?",
+      "description": "Если Вам этот двигатель не наносит урон, то Вы делаете что-то неправильно...",
+      "x": 200,
+      "y": 12,
+      "icon": {
+        "id": "Forestry:engine",
+        "damage": 4
+      },
+      "tasks": [
+        {
+          "type": "CRAFT",
+          "description": "Первый двигатель?",
+          "longDescription": "Вам нужно будет найти энергию для работы ваших первых машин. Возможно, лучшим выбором будет человеческая энергия. Просто щелкайте правой кнопкой мыши по двигателю, чтобы завести его. Осторожно, может быть больно!",
+          "items": [
+            {
+              "item": {
+                "id": "Forestry:engine",
+                "damage": 4
+              }
+            }
+          ]
+        }
+      ],
+      "reward": [
+        {
+          "id": "minecraft:clock"
+        }
+      ]
+    },
+    {
+      "name": "Экологически чистый?",
+      "description": "Да, мы согласны с этим.",
+      "x": 273,
+      "y": 72,
+      "icon": {
+        "id": "Forestry:engine",
+        "damage": 4
+      },
+      "prerequisites": [
+        "Что не может сделать плотник?"
+      ],
+      "tasks": [
+        {
+          "type": "CRAFT",
+          "description": "Лучший двигатель",
+          "longDescription": "Простое задание. Просто сделайте двигатель.",
+          "items": [
+            {
+              "item": {
+                "id": "Forestry:engine",
+                "damage": 2
+              }
+            }
+          ]
+        },
+        {
+          "type": "DETECT",
+          "description": "Смазка для двигателя",
+          "longDescription": "Масло - это смазочный материал, поэтому лучше сделать немного. Лучше поместить его во что-нибудь термостойкое. На самом деле, помимо масла в двигатель можно заливать разные жидкости и от них зависит разное количество выдаваемой энергии. Посмотрите список принимаемых жидкостей в интерфейсе двигателя зажав Shift.",
+          "items": [
+            {
+              "item": {
+                "id": "Forestry:canSeedOil"
+              }
+            }
+          ]
+        },
+        {
+          "type": "DETECT",
+          "description": "А еще нужна лава",
+          "longDescription": "Теперь разогревайте его.",
+          "items": [
+            {
+              "item": {
+                "id": "Forestry:canLava"
+              }
+            }
+          ]
+        }
+      ],
+      "reward": [
+        {
+          "id": "Forestry:canLava",
+          "amount": 4
+        }
+      ]
+    },
+    {
+      "name": "Получаем черенки",
+      "description": "Блин, он сломался!",
+      "x": 237,
+      "y": 116,
+      "icon": {
+        "id": "Forestry:grafter"
+      },
+      "prerequisites": [
+        "Профессиональные ножницы"
+      ],
+      "tasks": [
+        {
+          "type": "DETECT",
+          "description": "Обычный садовый нож",
+          "longDescription": "Обычная вещь для сбора саженцев, но немного другой рецепт. На самом деле здесь квест для того, чтобы показать, что есть улучшенный садовый нож (Grafter). Заметка: кажется, работает только на деревьях из Forestry.",
+          "items": [
+            {
+              "item": {
+                "id": "Forestry:grafter"
+              }
+            }
+          ]
+        },
+        {
+          "type": "DETECT",
+          "description": "И улучшенный вариант",
+          "longDescription": "Серьезно, он надоел все время ломаться.",
+          "items": [
+            {
+              "item": {
+                "id": "Forestry:grafterProven"
+              }
+            }
+          ]
+        }
+      ],
+      "reward": [
+        {
+          "id": "Forestry:grafter"
+        },
+        {
+          "id": "terrafirmacraft:item.MetalNugget",
+          "damage": 17
+        }
+      ]
+    },
+    {
+      "name": "Секрето...секретато...чего?",
+      "description": "Секретер. Ударение на последнее \"е\".",
+      "x": 76,
+      "y": 54,
+      "icon": {
+        "id": "Forestry:core",
+        "damage": 1
+      },
+      "prerequisites": [
+        "Собери их всех!",
+        "Им нужен новый дом"
+      ],
+      "tasks": [
+        {
+          "type": "CRAFT",
+          "description": "Полезеная штука",
+          "longDescription": "Возможно, Вы не знаете как это работает, но этот столик действительно очень полезный. Это потому, что тут в сборке нет аддона, который облегчает разведение пчел. Поместите пчелу в центр и завершите мини-игру. Если Вы положите продукты пчеловодства сбоку слева и осмотрите свой экземпляр пчелы, Вы можете получить несколько полезных подсказок. Кстати, Вы можете тут анализировать и саженцы.",
+          "items": [
+            {
+              "item": {
+                "id": "Forestry:core",
+                "damage": 1
+              }
+            }
+          ]
+        },
+        {
+          "type": "DETECT",
+          "description": "Действительно полезная",
+          "longDescription": "Видите? Вы можете создавать подсказки для скрещивания пчел. Теперь быстрее прочитайте эту заметку, пока это не сделал кто-то другой...",
+          "items": [
+            {
+              "item": {
+                "id": "Forestry:researchNote"
+              },
+              "precision": "NBT_FUZZY"
+            }
+          ]
+        }
+      ],
+      "reward": [
+        {
+          "id": "Forestry:waxCapsuleSeedOil",
+          "amount": 4
+        }
+      ]
+    },
+    {
+      "name": "Профессиональные ножницы",
+      "description": "Крутые и полезные, но с подвохом...",
+      "x": 237,
+      "y": 81,
+      "icon": {
+        "id": "terrafirmacraft:item.Black Steel Shears"
+      },
+      "prerequisites": [
+        "Что не может сделать плотник?"
+      ],
+      "tasks": [
+        {
+          "type": "DETECT",
+          "description": "Аккуратное срезание",
+          "longDescription": "Вы уже стали опытным генетиком у себя на заднем дворе, так зачем теперь останавливаться? Если Вы будете срубать правильные саженцы, Вы получите правильную смесь ДНК, чтобы создать новый вид дерева, который будет хорош для разведения. Кажется, что некоторые саженцы очень сложно добываемые. Ваши ножницы, идеально подходят для их сбора (100% шанс дропа саженца), хотя они КРАЙНЕ НЕ ПРОЧНЫЕ...",
+          "items": [
+            {
+              "item": {
+                "id": "terrafirmacraft:item.Black Steel Shears"
+              },
+              "precision": "NBT_FUZZY"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Свеча под дождем",
+      "description": "Если бы я только мог зажечь ее.",
+      "x": 36,
+      "y": 110,
+      "icon": {
+        "id": "Forestry:candle"
+      },
+      "prerequisites": [
+        "Собери их всех!"
+      ],
+      "tasks": [
+        {
+          "type": "DETECT",
+          "description": "И все-таки как?",
+          "longDescription": "Я не знал этого, и я уверен, что многие другие тоже не знают. Чтобы зажечь свечу, щелкните по ней правой кнопкой мыши с кремнем в руке.",
+          "items": [
+            {
+              "item": {
+                "id": "Forestry:candle"
+              }
+            },
+            {
+              "item": {
+                "id": "minecraft:flint"
+              }
+            }
+          ]
+        }
+      ],
+      "reward": [
+        {
+          "id": "Forestry:candle"
+        }
+      ]
+    },
+    {
+      "name": "На деревню дедушке",
+      "description": "На этот раз Вы точно знаете адрес. Как пользоваться? Поставьте Торговую станцию, в интерфейсе надо дать ей имя на английском. Заправьте слоты бумагой и марками разной (по возможности) номинацией (1n,2n,5n,10n...). Каждый стак предметов (даже если не полный) для отправки стоит \"1n\" и само письмо тоже \"1n\". В центре интерфейса станции есть 4 слота. \"Получать\" - это \"цена оплаты\" за товар. Нижний слот \"отправлять\" - что продаем. Заполните эти слоты нужными Вам пропорциями предметов и теперь в правой стороне от \"отправлять\" поле из 10 слотов станет активно и в него положите запасы продаваемого товара. В верхнее поле из 15 слотов будет приходить \"оплата\" за товар. Теперь Вам нужно пустое Письмо. Возьмите в руку не больше одного и Нажмите ПКМ, попадете в его интерфейс. Возле поля для ввода есть переключающийся значок \"письма\" и \"$\". Переключите в режим \"Торговая станция\" и введите её имя. Чтобы узнать все торговые станции можно скрафтить \"Каталог\" (catalogue). Эта книжица покажет все станции и что они продают. В письме пропишите имя нужной торг. станции, приложите марки и предметы на обмен. Уточнение для русской локализации, т.к. она может запутать: строчка \"пожалуйста пришлите\" - это то, что вы получите, а \"за каждые прикрепленные\" - это цена за штуку. Торговую станцию указали, положили предметы на обмен, прикрепили марки, теперь отправляйте письмо в почтовый ящик щелкнув по нему ПКМ. На экране в левом верхнем углу у Вас должно появиться уведомление о почте. В почтовом ящике появятся ответные 2 письма. Одно - информационного характера, а другое с предметами. Рваные конверты можно переработать в бумагу. Видите? мод Forestry оказался полезным.",
+      "x": 237,
+      "y": 153,
+      "icon": {
+        "id": "Forestry:mail"
+      },
+      "tasks": [
+        {
+          "type": "CRAFT",
+          "description": "Экономит долгую прогулку",
+          "longDescription": "Вы действительно захотите использовать Почтовые ящики, так как у Вас будут очень длинные путешествия. Торговые станции работают вкупе с Почтовыми ящиками. ",
+          "items": [
+            {
+              "item": {
+                "id": "Forestry:mail"
+              }
+            }
+          ]
+        }
+      ],
+      "reward": [
+        {
+          "id": "Forestry:stamps",
+          "amount": 8
+        },
+        {
+          "id": "Forestry:letters",
+          "amount": 8
+        }
+      ]
+    }
+  ],
+  "reputationBar": []
+}
