@@ -1,0 +1,17 @@
+Osmium появляется в Chalk, Chert, Claystone, Conglomerate, Dolomite, Limestone, Rock Salt, Shale rock с частотой 1 в 100 чанков.
+
+Apatite появляется в Chalk, Conglomerate, Limestone и Shale с частотой 1 в 200 чанков.
+
+Petrified Wood - это название TFC. Появляется в Chert, Claystone, Conglomerate, Shale и Limestone rock с частотой 1 в 120 чанков. Используется для изготовления Netherrack.
+
+Strontium появляется в Chalk, Chert, Claystone, Conglomerate, Dolomite, Limestone, Rock Salt, Shale rock с частотой 1 в 150 чанков. Используется для изготовления Blaze Powder.
+
+Scapolite появляется в Gabbro, Diorite, Gneiss и Limestone с частотой 1 в 120 чанков. Используется для изготовления Glowstone Dust.
+
+Quartz появляется в Rhyolite, Granite, Shale, Schist, Gneiss, Quartzite
+
+Scheelite (tungsten) появляется в Diorite, Gabbro и Granite rock с частотой 1 в 150 чанков и на поверхности на более высоком уровне Y в граните с частотой 1 в 120 чанков.
+
+Wolframite (tungsten) появляется в igneous intrusive rock с частотой 1 в 120 чанков.
+
+Bauxite (aluminum) появляется в Gneiss, Granite, Basalt и Shale с частотой 1 в 120 чанков. Используется в моде Immersive Engineering.
